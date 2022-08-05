@@ -1,0 +1,23 @@
+{
+  "name": "odintodo",
+  "version": "1.0.0",
+  "description": "ToDo list webpage using HTML/CSS/JS/webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zjs6631/OdinToDo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zjs6631/OdinToDo/issues"
+  },
+  "homepage": "https://github.com/zjs6631/OdinToDo#readme",
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
