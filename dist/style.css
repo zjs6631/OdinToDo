@@ -7,5 +7,37 @@ html, body{
 
 #content {
     display: grid;
-    grid-template-columns: 1fr 10fr;
+    grid-template-columns: 1fr;
+    height: 100%;
+    width: auto;
+}
+
+#mainContainer {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+#navBar {
+    grid-column-start: 1;
+    background-color: #287a85;
+    color: #EDF7F6;
+    text-align: center;
+    font-size: 30px;
+}
+
+#navBar #projBtn{
+    border-radius: 15px;
+    border-style: none;
+    background-color: #A28089;
+    color: #EDF7F6;
+    font-size: medium;
+    padding: 5px;
+    margin: 5px;
+}
+#projectPage {
+    grid-column-start: 2;
+    background-color: #EDF7F6;
+    padding: 10px;
+    font-size: 30px;
+    color: #164349;
 }
