@@ -10,9 +10,12 @@ Container.appendChild(mainPage());
 
 let todo = new Todo('title','descript','duedate','priority','notes');
 let project = new Project('First Project');
-project.push(todo);
+project.arr.push(todo);
+let todo2 = new Todo('zachs book', 'its a bad one', '3/5', '5', 'nothing noteworthy')
 
-console.log(project.getArr());
+project.arr.push(todo2);
+
+console.log(project.getArr);
 
 if(storageAvailable('localStorage')){
     console.log('local storage available!')

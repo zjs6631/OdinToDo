@@ -19,6 +19,35 @@ const mainPage = () => {
     const projectPage = document.createElement('div');
     projectPage.setAttribute('id', 'projectPage');
     projectPage.innerHTML = "Current Projects: ";
+
+    //create a modal form to take in new project information
+    const projectModal = document.createElement('div');
+    projectModal.setAttribute('id', 'projectModal');
+    const projModalLabel = document.createElement('label');
+    projModalLabel.innerHTML = "Project Name: ";
+    const projModalInput = document.createElement('input');
+    projModalInput.setAttribute('type', 'text');
+    projModalInput.setAttribute('id', 'projModalInput')
+
+    const projBtnBar = document.createElement('div');
+    const projSubModalBtn = document.createElement('button');
+    projSubModalBtn.setAttribute('id', 'subBtn');
+    projSubModalBtn.innerHTML = "Submit";
+    const projCancelModalBtn = document.createElement('button');
+    projCancelModalBtn.setAttribute('id', 'cancelModalBtn');
+    projCancelModalBtn.innerHTML = "Cancel";
+    projBtnBar.appendChild(projSubModalBtn);
+    projBtnBar.appendChild(projCancelModalBtn);
+    projBtnBar.setAttribute('id', 'projBtnBar');
+
+
+    projectModal.appendChild(projModalLabel);
+    projectModal.appendChild(projModalInput);
+    projectModal.appendChild(projBtnBar);
+    
+
+    projectPage.appendChild(projectModal);
+
     //append the results to the mainContainer
     mainContainer.appendChild(navBar);
     mainContainer.appendChild(projectPage);

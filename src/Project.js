@@ -2,28 +2,26 @@
 //should have a name attribute and an array to hold todo objects
 
 export class Project {
-
-    constructor(name){
+    
+    constructor(name, arr = []){
         this.name = name;
+        this.arr = arr;
         
     }
+
+    
     
     get getName(){
         return this.name;
     }
 
     get getArr(){
-        return arr;
+        return this.arr;
     }
 
     set setName(a){
         this.name = a
     }
 
-    
-    
-    push(a) {
-        arr.push(a);
-    }
 
 }
