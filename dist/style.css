@@ -46,7 +46,7 @@ html, body{
 }
 
 #projectModal{
-    display: grid;
+    display: none;
     justify-content: center;
     grid-template-rows: 1fr 1fr;
     justify-self: center;

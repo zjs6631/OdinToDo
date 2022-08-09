@@ -12,6 +12,7 @@ const mainPage = () => {
     navBar.appendChild(navTitle);
     const projButton = document.createElement('button');
     projButton.setAttribute('id', 'projBtn');
+    projButton.setAttribute('class', 'button');
     projButton.innerHTML = "New Project";
     navBar.appendChild(projButton);
 
@@ -32,9 +33,11 @@ const mainPage = () => {
     const projBtnBar = document.createElement('div');
     const projSubModalBtn = document.createElement('button');
     projSubModalBtn.setAttribute('id', 'subBtn');
+    projSubModalBtn.setAttribute('class', 'button');
     projSubModalBtn.innerHTML = "Submit";
     const projCancelModalBtn = document.createElement('button');
     projCancelModalBtn.setAttribute('id', 'cancelModalBtn');
+    projCancelModalBtn.setAttribute('class', 'button');
     projCancelModalBtn.innerHTML = "Cancel";
     projBtnBar.appendChild(projSubModalBtn);
     projBtnBar.appendChild(projCancelModalBtn);
