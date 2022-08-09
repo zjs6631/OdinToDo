@@ -31,14 +31,12 @@ cancelProjBtn.addEventListener('click', ()=>{
 
 
 subProjBtn.addEventListener('click', ()=>{
-    for(let i = 0; i < 1; i++){
-    
     let res = new Project(projModalInput.value);
     const projPage = document.getElementById('projectPage');
     projPage.appendChild(projectDivs(res));
     projModalInput.value = "";
     document.getElementById('projectModal').style.display = "none";
-    }
+    
 })
 
 
