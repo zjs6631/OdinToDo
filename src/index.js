@@ -32,7 +32,7 @@ cancelProjBtn.addEventListener('click', ()=>{
 
 subProjBtn.addEventListener('click', ()=>{
     let res = new Project(projModalInput.value);
-    const projPage = document.getElementById('projectPage');
+    const projPage = document.getElementById('projContainer');
     projPage.appendChild(projectDivs(res));
     projModalInput.value = "";
     document.getElementById('projectModal').style.display = "none";

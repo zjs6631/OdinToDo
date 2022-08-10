@@ -19,7 +19,14 @@ const mainPage = () => {
     //project page created
     const projectPage = document.createElement('div');
     projectPage.setAttribute('id', 'projectPage');
-    projectPage.innerHTML = "Current Projects: ";
+    const projectPageTitle = document.createElement('h3');
+    projectPageTitle.setAttribute('id', 'projectPageTitle');
+    projectPageTitle.innerHTML = "Current Projects: ";
+    projectPage.appendChild(projectPageTitle);
+
+    const projContainer = document.createElement('div');
+    projContainer.setAttribute('id', 'projContainer');
+    projectPage.appendChild(projContainer);
 
     //create a modal form to take in new project information
     const projectModal = document.createElement('div');
@@ -49,7 +56,7 @@ const mainPage = () => {
     projectModal.appendChild(projBtnBar);
     
 
-    projectPage.appendChild(projectModal);
+    projContainer.appendChild(projectModal);
 
     //append the results to the mainContainer
     mainContainer.appendChild(navBar);
