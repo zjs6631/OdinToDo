@@ -13,6 +13,8 @@ const projectDivs = (project) => {
     taskAddBtn.setAttribute('class', 'taskAddBtn');
     taskAddBtn.innerHTML = "+";
     projDiv.appendChild(taskAddBtn);
+
+    
     
     return projDiv;
 }

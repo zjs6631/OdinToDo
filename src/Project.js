@@ -3,10 +3,10 @@
 
 export class Project {
     
-    constructor(name, arr = []){
+    constructor(name, index, arr = []){
         this.name = name;
         this.arr = arr;
-        
+        this.index = index;
     }
 
     
@@ -19,8 +19,16 @@ export class Project {
         return this.arr;
     }
 
+    get getIndex(){
+        return this.index;
+    }
+
     set setName(a){
         this.name = a
+    }
+    
+    set setIndex(a){
+        this.index = a;
     }
 
 

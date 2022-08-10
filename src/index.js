@@ -3,6 +3,8 @@ import {Project} from './Project.js';
 import {mainPage} from './generateMainPage';
 import {storageAvailable} from './localStorage';
 import {projectDivs} from './generateProjectDivs';
+import {addListener} from './delBtnListeners';
+import {removeListeners} from './removeListeners';
 
 console.log("js connected"); //checking to make sure webpack properly connected
 //grabbed the main container element from the DOM and load the mainPage with the mainPage function
@@ -12,7 +14,7 @@ Container.appendChild(mainPage());
 
 const subProjBtn = document.getElementById('subBtn');
 const newProjBtn = document.getElementById('projBtn');
-        
+    
 const cancelProjBtn = document.getElementById('cancelModalBtn');
 const projModalInput = document.getElementById('projModalInput');
 
@@ -21,8 +23,6 @@ newProjBtn.addEventListener('click', ()=>{
     document.getElementById('projectModal').style.display = "grid";
     })
         
-        
-
 
 cancelProjBtn.addEventListener('click', ()=>{
     document.getElementById('projectModal').style.display = "none";
@@ -30,14 +30,26 @@ cancelProjBtn.addEventListener('click', ()=>{
 })
 
 
+let index = 0;
+
 subProjBtn.addEventListener('click', ()=>{
-    let res = new Project(projModalInput.value);
+    
+    let res = new Project(projModalInput.value, index);
     const projPage = document.getElementById('projContainer');
     projPage.appendChild(projectDivs(res));
     projModalInput.value = "";
     document.getElementById('projectModal').style.display = "none";
     
+    removeListeners();
+    index+=1;
+    addListener();
+    
 })
+
+
+
+
+
 
 
 let todo = new Todo('title','descript','duedate','priority','notes');
