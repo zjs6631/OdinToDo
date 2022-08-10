@@ -112,7 +112,8 @@ html, body{
     padding: 5px;
     margin: 0;
     color: #EDF7F6;
-    font-size: 35px;
+    font-size: auto;
+    height: fit-content;
 }
 
 .projDiv .delBtn{
