@@ -7,11 +7,11 @@ const projectDivs = (project) => {
     projDiv.appendChild(projName);
     const projDelBtn = document.createElement('button');
     projDelBtn.setAttribute('class', 'delBtn');
+    projDelBtn.setAttribute('id', 'delBtn' + project.index);
     projDelBtn.innerHTML = "X";
     projDiv.appendChild(projDelBtn);
     const taskAddBtn = document.createElement('button');
     taskAddBtn.setAttribute('class', 'taskAddBtn');
-    taskAddBtn.innerHTML = "+";
     projDiv.appendChild(taskAddBtn);
 
     

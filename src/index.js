@@ -40,11 +40,28 @@ subProjBtn.addEventListener('click', ()=>{
     projModalInput.value = "";
     document.getElementById('projectModal').style.display = "none";
     
-    removeListeners();
+    let delBtn = document.getElementById('delBtn' + res.index);
+    delBtn.addEventListener('click', ()=>{
+        delBtn.parentElement.remove();
+    })
+
+    
+
+    
+
+    
     index+=1;
-    addListener();
+    
     
 })
+
+
+
+
+
+
+    
+
 
 
 
