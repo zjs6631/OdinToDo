@@ -3,6 +3,7 @@ import {Project} from './Project.js';
 import {mainPage} from './generateMainPage';
 import {storageAvailable} from './localStorage';
 import {projectDivs} from './generateProjectDivs';
+import {taskDivs} from './generateTaskDivs';
 
 console.log("js connected"); //checking to make sure webpack properly connected
 //grabbed the main container element from the DOM and load the mainPage with the mainPage function
@@ -15,6 +16,7 @@ const newProjBtn = document.getElementById('projBtn');
     
 const cancelProjBtn = document.getElementById('cancelModalBtn');
 const projModalInput = document.getElementById('projModalInput');
+
 
 newProjBtn.addEventListener('click', ()=>{
     console.log("clicked!");
@@ -29,6 +31,12 @@ cancelProjBtn.addEventListener('click', ()=>{
 
 
 let index = 0;
+const taskModal = document.getElementById('taskModal');
+const titleInput = document.getElementById('titleInput');
+const descriptInput = document.getElementById('descriptInput');
+const dateInput = document.getElementById('dateInput');
+const priorityInput = document.getElementById('priorityInput');
+const notesInput = document.getElementById('notesInput');
 
 subProjBtn.addEventListener('click', ()=>{
 
@@ -42,21 +50,40 @@ subProjBtn.addEventListener('click', ()=>{
     delBtn.addEventListener('click', ()=>{
         delBtn.parentElement.remove();
     })
-
+    
     let addBtn = document.getElementById('addBtn' + res.index);
     addBtn.addEventListener('click', ()=>{
-        console.log("add btn clicked!!");
+        taskModal.style.display = "grid";
+
+        const taskModalCancel = document.getElementById('taskDelBtn');
+        taskModalCancel.addEventListener('click', ()=>{
+        taskModal.style.display = "none";
+        titleInput.value = "";
+        descriptInput.value = "";
+        dateInput.value = "";
+        priorityInput.value = "";
+        notesInput.value = "";
+        })
+
+        let taskSubBtn = document.getElementById('taskSubBtn');
+        taskSubBtn.addEventListener('click', ()=>{
+            
+            let currAddBtn = document.getElementById('addBtn' + res.index);
+            let newTask = new Todo(titleInput.value, descriptInput.value, dateInput.value, priorityInput.value, notesInput.value);
+            currAddBtn.parentElement.appendChild(taskDivs(newTask));
+            taskModal.style.display = "none";
+            titleInput.value = "";
+            descriptInput.value = "";
+            dateInput.value = "";
+            priorityInput.value = "";
+            notesInput.value = "";
+        })
     })
 
-    
-
-    
-
-    
-    index+=1;
-    
-    
+    index+=1;  
 })
+
+
 
 
 

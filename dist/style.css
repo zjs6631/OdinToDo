@@ -141,7 +141,7 @@ html, body{
 }
 
 #taskModal{
-    display: grid;
+    display: none;
     position: absolute;
     z-index: 3;
     justify-content: center;
@@ -154,6 +154,7 @@ html, body{
     background-color: #287a85;
     color: #EDF7F6;
     padding: 10px;
+    font-size: 20px;
     
 }
 
@@ -214,3 +215,11 @@ html, body{
     grid-column-start: 2;
     align-self: center;
 }
+
+.taskDiv{
+    height: 50px;
+    width: 50px;
+    background-color: #A28089;
+
+}
+
