@@ -12,6 +12,8 @@ const projectDivs = (project) => {
     projDiv.appendChild(projDelBtn);
     const taskAddBtn = document.createElement('button');
     taskAddBtn.setAttribute('class', 'taskAddBtn');
+    taskAddBtn.setAttribute('id', 'addBtn' + project.index);
+    taskAddBtn.innerHTML = "+";
     projDiv.appendChild(taskAddBtn);
 
     

@@ -139,3 +139,78 @@ html, body{
     align-self: end;
     margin: 5px;
 }
+
+#taskModal{
+    display: grid;
+    position: absolute;
+    z-index: 3;
+    justify-content: center;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: 1fr 2fr;
+    justify-self: center;
+    
+    width: fit-content;
+    height: auto;
+    background-color: #287a85;
+    color: #EDF7F6;
+    padding: 10px;
+    
+}
+
+#taskBtnBar{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 10px;
+    justify-items: center;
+    grid-row-start: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#taskBtnBar button{
+    width: 80px;
+    height: 30px;
+    background-color: #A28089;
+    color: #EDF7F6;
+    border-radius: 15px;
+    border-style: none;
+    
+}
+
+#taskModal label{
+    align-self: center;
+    justify-self: end;
+}
+
+#titleInput{
+    height: fit-content;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    align-self: center;
+}
+#descriptInput{
+    height: fit-content;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    align-self: center;
+}
+#dateInput{
+    height: fit-content;
+    grid-row-start: 3;
+    grid-column-start: 2;
+    align-self: center;
+}
+#priorityInput{
+    height: fit-content;
+    grid-row-start: 4;
+    grid-column-start: 2;
+    align-self: center;
+}
+#notesInput{
+    height: fit-content;
+    grid-row-start: 5;
+    grid-column-start: 2;
+    align-self: center;
+}

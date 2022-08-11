@@ -58,6 +58,61 @@ const mainPage = () => {
 
     projContainer.appendChild(projectModal);
 
+
+    //create a task modal to take in task information when needed
+
+    const taskModal = document.createElement('div');
+    taskModal.setAttribute('id', 'taskModal');
+    const titleLbl = document.createElement('label');
+    titleLbl.innerHTML = "Title: "
+    const titleInput = document.createElement('input');
+    titleInput.setAttribute('type', 'text');
+    titleInput.setAttribute('id', 'titleInput');
+    const descriptLbl = document.createElement('label');
+    descriptLbl.innerHTML = "Description: ";
+    const descriptInput = document.createElement('input');
+    descriptInput.setAttribute('type', 'text');
+    descriptInput.setAttribute('id', 'descriptInput');
+    const dateLbl = document.createElement('label');
+    dateLbl.innerHTML = "Date: ";
+    const dateInput = document.createElement('input');
+    dateInput.setAttribute('type', 'text');
+    dateInput.setAttribute('id', 'dateInput');
+    const priorityLbl = document.createElement("label");
+    priorityLbl.innerHTML = "Priority: ";
+    const priorityInput = document.createElement('input');
+    priorityInput.setAttribute('type', 'text');
+    priorityInput.setAttribute('id', 'priorityInput');
+    const notesLbl = document.createElement('label');
+    notesLbl.innerHTML = "Notes: ";
+    const notesInput = document.createElement('input');
+    notesInput.setAttribute('type', 'text');
+    notesInput.setAttribute('id', 'notesInput');
+
+    const taskBtnBar = document.createElement('div');
+    taskBtnBar.setAttribute('id', 'taskBtnBar');
+    const taskSubBtn = document.createElement('button');
+    taskSubBtn.setAttribute('id', 'taskSubBtn');
+    taskSubBtn.innerHTML = "Submit";
+    const taskDelBtn = document.createElement('button');
+    taskDelBtn.setAttribute('id', 'taskDelBtn');
+    taskDelBtn.innerHTML = "Cancel";
+    taskBtnBar.appendChild(taskSubBtn);
+    taskBtnBar.appendChild(taskDelBtn);
+    
+    taskModal.appendChild(titleLbl);
+    taskModal.appendChild(titleInput);
+    taskModal.appendChild(descriptLbl);
+    taskModal.appendChild(descriptInput);
+    taskModal.appendChild(dateLbl);
+    taskModal.appendChild(dateInput);
+    taskModal.appendChild(priorityLbl);
+    taskModal.appendChild(priorityInput);
+    taskModal.appendChild(notesLbl);
+    taskModal.appendChild(notesInput);
+    taskModal.appendChild(taskBtnBar);
+
+    projContainer.appendChild(taskModal);
     //append the results to the mainContainer
     mainContainer.appendChild(navBar);
     mainContainer.appendChild(projectPage);

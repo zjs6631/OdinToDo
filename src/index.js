@@ -3,8 +3,6 @@ import {Project} from './Project.js';
 import {mainPage} from './generateMainPage';
 import {storageAvailable} from './localStorage';
 import {projectDivs} from './generateProjectDivs';
-import {addListener} from './delBtnListeners';
-import {removeListeners} from './removeListeners';
 
 console.log("js connected"); //checking to make sure webpack properly connected
 //grabbed the main container element from the DOM and load the mainPage with the mainPage function
@@ -33,7 +31,7 @@ cancelProjBtn.addEventListener('click', ()=>{
 let index = 0;
 
 subProjBtn.addEventListener('click', ()=>{
-    
+
     let res = new Project(projModalInput.value, index);
     const projPage = document.getElementById('projContainer');
     projPage.appendChild(projectDivs(res));
@@ -43,6 +41,11 @@ subProjBtn.addEventListener('click', ()=>{
     let delBtn = document.getElementById('delBtn' + res.index);
     delBtn.addEventListener('click', ()=>{
         delBtn.parentElement.remove();
+    })
+
+    let addBtn = document.getElementById('addBtn' + res.index);
+    addBtn.addEventListener('click', ()=>{
+        console.log("add btn clicked!!");
     })
 
     
