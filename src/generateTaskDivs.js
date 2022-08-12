@@ -11,7 +11,7 @@ const taskDivs = (task) => {
     taskCompletedBtn.innerHTML = "Completed";
     taskDiv.appendChild(taskCompletedBtn);
     const taskAddBtn = document.createElement('button');
-    taskAddBtn.setAttribute('class', 'taskAddBtn');
+    taskAddBtn.setAttribute('class', 'seeMoreBtn');
     //taskAddBtn.setAttribute('id', 'addBtn' + num);
     taskAddBtn.innerHTML = "See More";
     taskDiv.appendChild(taskAddBtn);
