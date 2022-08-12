@@ -1,6 +1,7 @@
 const projectDivs = (project) => {
     const projDiv = document.createElement('div');
     projDiv.setAttribute('class', 'projDiv');
+    projDiv.setAttribute('id', 'projDiv' + project.index);
     const projName = document.createElement('h5');
     projName.setAttribute('class', 'projName');
     projName.innerHTML = project.name;
@@ -19,6 +20,11 @@ const projectDivs = (project) => {
     
     
     return projDiv;
+}
+
+const taskModal = (project) => {
+
+    
 }
 
 export {projectDivs};
