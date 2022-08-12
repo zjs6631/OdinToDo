@@ -37,6 +37,7 @@ const descriptInput = document.getElementById('descriptInput');
 const dateInput = document.getElementById('dateInput');
 const priorityInput = document.getElementById('priorityInput');
 const notesInput = document.getElementById('notesInput');
+let lastAddBtn;
 
 subProjBtn.addEventListener('click', ()=>{
 
@@ -54,8 +55,13 @@ subProjBtn.addEventListener('click', ()=>{
     let addBtn = document.getElementById('addBtn' + res.index);
     addBtn.addEventListener('click', ()=>{
         taskModal.style.display = "grid";
+        lastAddBtn = res.index
+    })
 
-        const taskModalCancel = document.getElementById('taskDelBtn');
+    index+=1;  
+})
+
+const taskModalCancel = document.getElementById('taskDelBtn');
         taskModalCancel.addEventListener('click', ()=>{
         taskModal.style.display = "none";
         titleInput.value = "";
@@ -65,10 +71,10 @@ subProjBtn.addEventListener('click', ()=>{
         notesInput.value = "";
         })
 
-        let taskSubBtn = document.getElementById('taskSubBtn');
+const taskSubBtn = document.getElementById('taskSubBtn');
         taskSubBtn.addEventListener('click', ()=>{
             
-            let currAddBtn = document.getElementById('addBtn' + res.index);
+            let currAddBtn = document.getElementById('addBtn' + lastAddBtn);
             let newTask = new Todo(titleInput.value, descriptInput.value, dateInput.value, priorityInput.value, notesInput.value);
             currAddBtn.parentElement.appendChild(taskDivs(newTask));
             taskModal.style.display = "none";
@@ -78,11 +84,6 @@ subProjBtn.addEventListener('click', ()=>{
             priorityInput.value = "";
             notesInput.value = "";
         })
-    })
-
-    index+=1;  
-})
-
 
 
 
