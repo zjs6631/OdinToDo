@@ -16,6 +16,18 @@ const taskDivs = (task) => {
     taskAddBtn.innerHTML = "See More";
     taskDiv.appendChild(taskAddBtn);
 
+    //create a taskInfoCard to display when see more button is pressed
+
+    const infoCard = document.createElement('div');
+    infoCard.setAttribute('class', 'infoCard');
+    infoCard.innerHTML = 'description:' +task.description + '<br>';
+    infoCard.innerHTML += 'Due Date: ' + task.dueDate + '<br>';
+    infoCard.innerHTML += 'Priority(1-5): ' + task.priority + '<br>';
+    infoCard.innerHTML += 'Notes: ' + task.notes;
+
+    
+    taskDiv.appendChild(infoCard);
+
     
     
     return taskDiv;
