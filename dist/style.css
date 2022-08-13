@@ -1,8 +1,10 @@
-html, body{
+html,body{
+    
     margin: 0;
-    padding: 0;
+
     height: 100%;
-    width: auto;
+    
+    background-color: #EDF7F6;
 }
 
 #content {
@@ -114,6 +116,9 @@ html, body{
     height: fit-content;
     width: fit-content;
     text-align: center;
+    padding: 10px;
+    justify-items: center;
+    gap: 5px;
 }
 
 .projDiv .projName{
@@ -241,7 +246,17 @@ html, body{
     justify-items: center;
     align-items: center;
     background-color: #A28089;
+    gap: 5px;
+    padding: 5px;
+    color: #EDF7F6;
     
+}
+
+.taskDiv button{
+    background-color:#287a85;
+    color: #EDF7F6;
+    border-style: none;
+    border-radius: 15px;
 }
 
 .taskName{
