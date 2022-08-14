@@ -23,16 +23,16 @@ const taskModalGenerator = (project) => {
         dateInput.setAttribute('id', 'dateInput' + project.index);
         const priorityLbl = document.createElement("label");
         priorityLbl.innerHTML = "Priority: ";
-        const priorityInput = document.createElement('select');
+        const priorityInput = document.createElement("select");
         priorityInput.setAttribute('name', 'priority');
         priorityInput.setAttribute('id', 'priorityInput' + project.index);
-        const high = document.createElement('option');
+        const high = document.createElement("option");
         high.setAttribute('text', 'High');
         high.setAttribute('value', 'High');
-        const low = document.createElement('option');
+        const low = document.createElement("option");
         low.setAttribute('value', 'Low');
         low.setAttribute('text', 'Low');
-        const medium = document.createElement('option');
+        const medium = document.createElement("option");
         medium.setAttribute('value', 'Medium');
         medium.setAttribute('text', 'Medium');
         priorityInput.appendChild(high);
@@ -66,6 +66,7 @@ const taskModalGenerator = (project) => {
         taskModal.appendChild(notesLbl);
         taskModal.appendChild(notesInput);
         taskModal.appendChild(taskBtnBar);
+
     
         return taskModal;
 }

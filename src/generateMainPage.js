@@ -78,11 +78,25 @@ const mainPage = () => {
     const dateInput = document.createElement('input');
     dateInput.setAttribute('type', 'text');
     dateInput.setAttribute('id', 'dateInput');
+
     const priorityLbl = document.createElement("label");
     priorityLbl.innerHTML = "Priority: ";
-    const priorityInput = document.createElement('input');
-    priorityInput.setAttribute('type', 'text');
+    const priorityInput = document.createElement("select");
+    priorityInput.setAttribute('name', 'priority');
     priorityInput.setAttribute('id', 'priorityInput');
+    const high = document.createElement("option");
+    high.innerHTML = "High";
+    high.setAttribute('value', 'High');
+    const low = document.createElement("option");
+    low.setAttribute('value', 'Low');
+    low.innerHTML = "Low";
+    const medium = document.createElement("option");
+    medium.setAttribute('value', 'Medium');
+    medium.innerHTML = "Medium";
+    priorityInput.appendChild(high);
+    priorityInput.appendChild(medium);
+    priorityInput.appendChild(low);
+
     const notesLbl = document.createElement('label');
     notesLbl.innerHTML = "Notes: ";
     const notesInput = document.createElement('input');
