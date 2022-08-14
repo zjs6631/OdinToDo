@@ -76,7 +76,7 @@ const mainPage = () => {
     const dateLbl = document.createElement('label');
     dateLbl.innerHTML = "Date: ";
     const dateInput = document.createElement('input');
-    dateInput.setAttribute('type', 'text');
+    dateInput.setAttribute('type', 'date');
     dateInput.setAttribute('id', 'dateInput');
 
     const priorityLbl = document.createElement("label");

@@ -1,3 +1,5 @@
+import { format, formatDistance, formatRelative, subDays } from 'date-fns'
+
 const taskDivs = (task) => {
     const taskDiv = document.createElement('div');
     taskDiv.setAttribute('class', 'taskDiv');
@@ -24,12 +26,12 @@ const taskDivs = (task) => {
     taskDiv.appendChild(completedIcon);
 
     //create a taskInfoCard to display when see more button is pressed
-
+    
     const infoCard = document.createElement('div');
     infoCard.setAttribute('class', 'infoCard');
     infoCard.setAttribute('id', 'task' + task.index);
     infoCard.innerHTML = 'Description:' +task.description + '<br>';
-    infoCard.innerHTML += 'Due Date: ' + task.dueDate + '<br>';
+    infoCard.innerHTML += 'Due Date: ' + format(new Date(task.dueDate), 'MM-dd-yyyy') + '<br>';
     infoCard.innerHTML += 'Priority: ' + task.priority + '<br>';
     infoCard.innerHTML += 'Notes: ' + task.notes;
 
