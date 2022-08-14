@@ -1,4 +1,8 @@
+//code used to generate each project div to be displayed on project page
+
 const projectDivs = (project) => {
+    //create a div and add an add button and a delete button
+    //append them to the div and return the results
     const projDiv = document.createElement('div');
     projDiv.setAttribute('class', 'projDiv');
     projDiv.setAttribute('id', 'projDiv' + project.index);
@@ -22,9 +26,6 @@ const projectDivs = (project) => {
     return projDiv;
 }
 
-const taskModal = (project) => {
 
-    
-}
 
 export {projectDivs};

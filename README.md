@@ -17,4 +17,4 @@ Still needs:
 1. Local storage
 2. Better color scheme
 3. navbar height
-4. info card text formatting
+

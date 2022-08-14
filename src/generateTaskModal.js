@@ -1,4 +1,6 @@
-        
+//this module is not currently in use
+//figured out an alternative solution to displaying the task modal, which involved
+//keeping track of id's for various tasks, so a single task modal could be used  
 const taskModalGenerator = (project) => {
         
         //create a task modal to take in task information when needed
@@ -71,4 +73,4 @@ const taskModalGenerator = (project) => {
         return taskModal;
 }
 
-export {taskModalGenerator};
+//export {taskModalGenerator};

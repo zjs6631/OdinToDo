@@ -248,11 +248,12 @@ html,body{
     grid-column: 1/ span 3;
     justify-items: center;
     align-items: center;
-    background-color: #A28089;
+    background-color: #EDF7F6;
     gap: 5px;
     padding: 5px;
     margin: -5px;
-    color: #EDF7F6;
+    color: #164349;
+    text-align: start;
     
 }
 
