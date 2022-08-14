@@ -9,7 +9,7 @@ const taskDivs = (task) => {
     const taskDiv = document.createElement('div');
     taskDiv.setAttribute('class', 'taskDiv');
     //add a name and append to task div
-    const taskName = document.createElement('h5');
+    const taskName = document.createElement('p');
     taskName.setAttribute('class', 'taskName');
     taskName.innerHTML = task.title;
     taskDiv.appendChild(taskName);

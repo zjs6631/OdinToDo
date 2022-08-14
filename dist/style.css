@@ -254,7 +254,13 @@ html,body{
     margin: -5px;
     color: #164349;
     text-align: start;
+    font-size: 20px;
     
+    
+}
+
+.taskDiv p{
+    word-break: break-all;
 }
 
 .taskDiv button{
