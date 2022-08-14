@@ -41,6 +41,10 @@ html,body{
     padding: 5px;
     margin: 5px;
 }
+
+#navBar #projBtn:hover{
+    background-color: #b29ba1;
+}
 #projectPage {
     height: 100%;
     width: auto;
@@ -66,6 +70,8 @@ html,body{
     height: fit-content;
     width: 100%;
 }
+
+
 
 #projectModal{
     display: none;
@@ -109,6 +115,10 @@ html,body{
     
 }
 
+#projBtnBar button:hover{
+    background-color: #b29ba1;
+}
+
 .projDiv{
     display: grid;
     background-color: #287a85;
@@ -148,6 +158,10 @@ html,body{
     grid-column-start: 3;
 }
 
+.delBtn:hover{
+    background-color: #b29ba1;
+}
+
 .projDiv .taskAddBtn{
     background-color: #A28089;
     color: #EDF7F6;
@@ -159,6 +173,10 @@ html,body{
     justify-self: start;
     align-self: start;
     margin: 5px;
+}
+
+.taskAddBtn:hover{
+    background-color:#b29ba1 ;
 }
 
 #taskModal{
@@ -200,6 +218,10 @@ html,body{
     border-radius: 15px;
     border-style: none;
     
+}
+
+#taskBtnBar button:hover{
+    background-color: #b29ba1;
 }
 
 #taskModal label{

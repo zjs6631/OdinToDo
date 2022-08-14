@@ -9,7 +9,9 @@ console.log("js connected"); //checking to make sure webpack properly connected
 
 //grabbed the main container element from the DOM and load the mainPage with the mainPage function
 const Container = document.getElementById('content');
+
 Container.appendChild(mainPage());
+
 
 //grab the project button 
 const newProjBtn = document.getElementById('projBtn');
@@ -23,6 +25,8 @@ const projModalInput = document.getElementById('projModalInput');
 newProjBtn.addEventListener('click', ()=>{
     document.getElementById('projectModal').style.display = "grid";
     })
+
+
         
 //add eventlitener to the cancel button that hides the modal and resets input value
 cancelProjBtn.addEventListener('click', ()=>{
