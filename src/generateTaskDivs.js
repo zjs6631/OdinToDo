@@ -28,9 +28,9 @@ const taskDivs = (task) => {
     const infoCard = document.createElement('div');
     infoCard.setAttribute('class', 'infoCard');
     infoCard.setAttribute('id', 'task' + task.index);
-    infoCard.innerHTML = 'description:' +task.description + '<br>';
+    infoCard.innerHTML = 'Description:' +task.description + '<br>';
     infoCard.innerHTML += 'Due Date: ' + task.dueDate + '<br>';
-    infoCard.innerHTML += 'Priority(1-5): ' + task.priority + '<br>';
+    infoCard.innerHTML += 'Priority: ' + task.priority + '<br>';
     infoCard.innerHTML += 'Notes: ' + task.notes;
 
     

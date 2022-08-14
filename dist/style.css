@@ -80,6 +80,7 @@ html,body{
     background-color: #287a85;
     color: #EDF7F6;
     padding: 10px;
+    box-shadow: 3px 3px #365d62;
     
 }
 
@@ -118,7 +119,8 @@ html,body{
     text-align: center;
     padding: 10px;
     justify-items: center;
-    gap: 5px;
+    gap: 15px;
+    
 }
 
 .projDiv .projName{
@@ -174,6 +176,7 @@ html,body{
     color: #EDF7F6;
     padding: 10px;
     font-size: 20px;
+    box-shadow: 5px 5px #365d62;
     
 }
 
@@ -292,11 +295,15 @@ html,body{
 
 .infoCard{
     display: none;
-    width: fit-content;
+    width: 100%;
     height: fit-content;
     font-size: 20px;
     grid-row-start: 2;
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
+    word-break: break-all;
+    text-align: start;
+    line-height: 30px;
+    
 }
 
