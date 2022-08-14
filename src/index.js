@@ -71,12 +71,32 @@ const taskModalCancel = document.getElementById('taskDelBtn');
         notesInput.value = "";
         })
 
+let taskIndex = 0;
+
 const taskSubBtn = document.getElementById('taskSubBtn');
         taskSubBtn.addEventListener('click', ()=>{
             
             let currAddBtn = document.getElementById('addBtn' + lastAddBtn);
-            let newTask = new Todo(titleInput.value, descriptInput.value, dateInput.value, priorityInput.value, notesInput.value);
+            let newTask = new Todo(titleInput.value, descriptInput.value, dateInput.value, priorityInput.value, notesInput.value, taskIndex);
+            taskIndex+=1;
             currAddBtn.parentElement.appendChild(taskDivs(newTask));
+
+            let seeThisTask = document.getElementById('seeMore' + newTask.index);
+            let seeInfo = document.getElementById('task' + newTask.index);
+            let displayCounter = 0;
+            seeThisTask.addEventListener('click', ()=>{
+                console.log("clicked!")
+                if(displayCounter == 0){
+                    seeInfo.style.display = "block";
+                    seeThisTask.innerHTML = "See Less";
+                    displayCounter+=1;
+                } else {
+                    seeInfo.style.display = "none";
+                    seeThisTask.innerHTML = "See More";
+                    displayCounter-=1;
+                }
+
+            })
             taskModal.style.display = "none";
             titleInput.value = "";
             descriptInput.value = "";
@@ -84,6 +104,10 @@ const taskSubBtn = document.getElementById('taskSubBtn');
             priorityInput.value = "";
             notesInput.value = "";
         })
+
+
+
+
 
 
 
