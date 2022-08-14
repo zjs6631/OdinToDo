@@ -7,6 +7,7 @@ const taskDivs = (task) => {
     taskDiv.appendChild(taskName);
     const taskCompletedBtn = document.createElement('button');
     taskCompletedBtn.setAttribute('class', 'completedBtn');
+    taskCompletedBtn.setAttribute('id', 'completedBtn' + task.index);
     //taskCompletedBtn.setAttribute('id', 'completedBtn' + num);
     taskCompletedBtn.innerHTML = "Completed";
     taskDiv.appendChild(taskCompletedBtn);

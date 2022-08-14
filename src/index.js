@@ -97,6 +97,19 @@ const taskSubBtn = document.getElementById('taskSubBtn');
                 }
 
             })
+
+            let taskCompletedBtn = document.getElementById('completedBtn' + newTask.index);
+            let completedIcon = document.getElementById('icon' + newTask.index);
+            let completed = false;
+            taskCompletedBtn.addEventListener('click', ()=>{
+                if(completed == false){
+                    completedIcon.style.backgroundColor = "Green";
+                    completed = true;
+                } else {
+                    completedIcon.style.backgroundColor = "red";
+                    completed = false;
+                }
+            })
             taskModal.style.display = "none";
             titleInput.value = "";
             descriptInput.value = "";
